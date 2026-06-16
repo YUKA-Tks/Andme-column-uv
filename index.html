@@ -8,36 +8,33 @@
 <style>
 :root{
   --ac:#C48A00;--acl:#FFF8E1;--acm:#FFD54F;--acd:#7A5500;
-  --text:#1E1A10;--t2:#6A5C30;--t3:#B8A870;
+  --text:#1E1A10;--t2:#6A5C30;
   --sur:#fff;--cream:#FFFDF5;--bdr:rgba(0,0,0,0.08);
   --r:16px;--rs:10px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Noto Sans JP',sans-serif;background:var(--cream);color:var(--text);line-height:1.8}
-.hero{background:linear-gradient(135deg,#7A5500 0%,#C48A00 50%,#FFD54F 100%);padding:32px 20px 24px;text-align:center;position:relative;overflow:hidden}
+.hero{background:linear-gradient(135deg,#7A5500 0%,#C48A00 50%,#FFD54F 100%);padding:24px 20px 18px;text-align:center;position:relative;overflow:hidden}
 .hero::before{content:'☀️';position:absolute;font-size:150px;opacity:.07;top:-10px;right:-10px;pointer-events:none}
-.hero-logo{font-family:'Cormorant Garamond',serif;font-size:18px;color:rgba(255,255,255,.65);letter-spacing:.22em;margin-bottom:6px}
-.hero-title{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:500;color:#fff;letter-spacing:.06em;margin-bottom:4px}
+.hero-logo{font-family:'Cormorant Garamond',serif;font-size:16px;color:rgba(255,255,255,.65);letter-spacing:.22em;margin-bottom:4px}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;color:#fff;letter-spacing:.06em;margin-bottom:2px}
 .hero-sub{font-size:11px;color:rgba(255,255,255,.72);letter-spacing:.1em}
-.wrap{max-width:560px;margin:0 auto;padding:16px 14px 60px}
-.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:16px 0 14px;justify-content:center}
+.wrap{max-width:560px;margin:0 auto;padding:12px 14px 40px}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0 12px;justify-content:center}
 .tab{padding:7px 13px;border-radius:20px;border:1px solid var(--bdr);background:var(--sur);font-size:11px;color:var(--t2);cursor:pointer;transition:all .15s;white-space:nowrap}
 .tab.active{background:var(--ac);color:#fff;border-color:var(--ac);font-weight:500}
 .tab:hover:not(.active){border-color:var(--acm);background:var(--acl)}
 .col-section{display:none}
 .col-section.active{display:block}
-.col-header{background:linear-gradient(135deg,var(--acl),var(--cream));border:1px solid var(--acm);border-radius:var(--r);padding:16px 18px;margin-bottom:14px}
-.col-no{font-size:10px;font-weight:500;color:var(--ac);letter-spacing:.18em;margin-bottom:4px}
-.col-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:500;color:var(--text);line-height:1.45}
-.img-wrap{width:100%;border-radius:var(--r);overflow:hidden;margin-bottom:14px;box-shadow:0 4px 20px rgba(0,0,0,.08)}
+.img-wrap{width:100%;border-radius:var(--r);overflow:hidden;margin-bottom:12px;box-shadow:0 4px 20px rgba(0,0,0,.08)}
 .img-wrap img{width:100%;display:block}
-.reserve-box{background:linear-gradient(135deg,var(--acl) 0%,#fff 60%,var(--acl) 100%);border:1.5px solid var(--acm);border-radius:var(--r);padding:14px 16px;text-align:center;margin-top:16px;cursor:pointer;box-shadow:0 2px 12px rgba(0,0,0,.06);position:relative;overflow:hidden}
-.reserve-box::before{content:'';position:absolute;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,var(--acm) 0%,transparent 70%);opacity:.12;top:-60px;right:-40px;pointer-events:none}
-.reserve-box-icon{font-size:24px;margin-bottom:4px;display:block}
-.reserve-box-label{font-size:10px;font-weight:500;color:var(--ac);letter-spacing:.18em;margin-bottom:4px}
-.reserve-box h3{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:500;color:var(--text);letter-spacing:.04em;margin-bottom:4px}
-.reserve-box small{font-size:11px;color:var(--t2);line-height:1.6;display:block}
-.reserve-btn{display:inline-block;margin-top:10px;padding:10px 28px;background:linear-gradient(135deg,var(--acd),var(--ac));color:#fff;border:none;border-radius:30px;font-size:12px;cursor:pointer;letter-spacing:.06em;box-shadow:0 3px 10px rgba(0,0,0,.12);font-family:'Noto Sans JP',sans-serif}
+/* 予約バナー：横長コンパクト */
+.reserve-box{display:flex;align-items:center;justify-content:space-between;gap:10px;background:linear-gradient(135deg,var(--acl) 0%,#fff 60%,var(--acl) 100%);border:1.5px solid var(--acm);border-radius:var(--rs);padding:10px 14px;margin-top:12px;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.reserve-box-left{display:flex;align-items:center;gap:8px}
+.reserve-box-icon{font-size:20px;flex-shrink:0}
+.reserve-box-text p{font-size:10px;color:var(--ac);letter-spacing:.1em;font-weight:500}
+.reserve-box-text h3{font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:500;color:var(--text);letter-spacing:.02em}
+.reserve-btn{flex-shrink:0;padding:8px 16px;background:linear-gradient(135deg,var(--acd),var(--ac));color:#fff;border:none;border-radius:20px;font-size:11px;cursor:pointer;letter-spacing:.04em;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,.12);font-family:'Noto Sans JP',sans-serif}
 </style>
 </head>
 <body>
@@ -56,53 +53,32 @@ body{font-family:'Noto Sans JP',sans-serif;background:var(--cream);color:var(--t
     <button class="tab" onclick="show(5)">⑥ 室内・曇りのUV</button>
   </div>
   <div class="col-section active" id="col-0">
-    <div class="col-header">
-      <div class="col-no">COLUMN 01</div>
-      <div class="col-title">SPFとPAって何？<br>数字の意味と正しい選び方</div>
-    </div>
     <div class="img-wrap"><img src="https://raw.githubusercontent.com/YUKA-Tks/Andme-column-uv/main/%EF%BC%86me%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84_%E3%82%B3%E3%83%A9%E3%83%A0%E7%94%BB%E5%83%8Fuv%E2%91%A0.png" alt="コラム1"></div>
   </div>
   <div class="col-section" id="col-1">
-    <div class="col-header">
-      <div class="col-no">COLUMN 02</div>
-      <div class="col-title">ノンケミカルとケミカル<br>どっちを選ぶ？</div>
-    </div>
     <div class="img-wrap"><img src="https://raw.githubusercontent.com/YUKA-Tks/Andme-column-uv/main/%EF%BC%86me%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84_%E3%82%B3%E3%83%A9%E3%83%A0%E7%94%BB%E5%83%8Fuv%E2%91%A1.png" alt="コラム2"></div>
   </div>
   <div class="col-section" id="col-2">
-    <div class="col-header">
-      <div class="col-no">COLUMN 03</div>
-      <div class="col-title">日焼け止めの正しい塗り方<br>塗り直し・落とし方</div>
-    </div>
     <div class="img-wrap"><img src="https://raw.githubusercontent.com/YUKA-Tks/Andme-column-uv/main/%EF%BC%86me%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84_%E3%82%B3%E3%83%A9%E3%83%A0%E7%94%BB%E5%83%8Fuv%E2%91%A2.png" alt="コラム3"></div>
   </div>
   <div class="col-section" id="col-3">
-    <div class="col-header">
-      <div class="col-no">COLUMN 04</div>
-      <div class="col-title">日焼けしてしまったときの<br>アフターケア</div>
-    </div>
     <div class="img-wrap"><img src="https://raw.githubusercontent.com/YUKA-Tks/Andme-column-uv/main/%EF%BC%86me%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84_%E3%82%B3%E3%83%A9%E3%83%A0%E7%94%BB%E5%83%8Fuv%E2%91%A3.png" alt="コラム4"></div>
   </div>
   <div class="col-section" id="col-4">
-    <div class="col-header">
-      <div class="col-no">COLUMN 05</div>
-      <div class="col-title">シミ・色素沈着を防ぐ<br>薄くするためのケア</div>
-    </div>
     <div class="img-wrap"><img src="https://raw.githubusercontent.com/YUKA-Tks/Andme-column-uv/main/%EF%BC%86me%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84_%E3%82%B3%E3%83%A9%E3%83%A0%E7%94%BB%E5%83%8Fuv%E2%91%A4.png" alt="コラム5"></div>
   </div>
   <div class="col-section" id="col-5">
-    <div class="col-header">
-      <div class="col-no">COLUMN 06</div>
-      <div class="col-title">「今日は曇りだから大丈夫」<br>は危険！</div>
-    </div>
     <div class="img-wrap"><img src="https://raw.githubusercontent.com/YUKA-Tks/Andme-column-uv/main/%EF%BC%86me%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84_%E3%82%B3%E3%83%A9%E3%83%A0%E7%94%BB%E5%83%8Fuv%E2%91%A5.png" alt="コラム6"></div>
   </div>
   <div class="reserve-box" onclick="alert('予約URLをここに設定してください')">
-    <span class="reserve-box-icon">🌸</span>
-    <div class="reserve-box-label">SALON RESERVATION</div>
-    <h3>ご予約はこちらから</h3>
-    <small>毎日のホームケアに、<br>定期的なサロンケアをプラスしてみませんか？<br>理想の肌への近道です。</small>
-    <br><button class="reserve-btn">予約する →</button>
+    <div class="reserve-box-left">
+      <span class="reserve-box-icon">🌸</span>
+      <div class="reserve-box-text">
+        <p>SALON RESERVATION</p>
+        <h3>ご予約はこちらから</h3>
+      </div>
+    </div>
+    <button class="reserve-btn">予約する →</button>
   </div>
 </div>
 <script>
