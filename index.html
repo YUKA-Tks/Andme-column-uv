@@ -28,13 +28,15 @@ body{font-family:'Noto Sans JP',sans-serif;background:var(--cream);color:var(--t
 .col-section.active{display:block}
 .img-wrap{width:100%;border-radius:var(--r);overflow:hidden;margin-bottom:12px;box-shadow:0 4px 20px rgba(0,0,0,.08)}
 .img-wrap img{width:100%;display:block}
-/* 予約バナー：横長コンパクト */
-.reserve-box{display:flex;align-items:center;justify-content:space-between;gap:10px;background:linear-gradient(135deg,var(--acl) 0%,#fff 60%,var(--acl) 100%);border:1.5px solid var(--acm);border-radius:var(--rs);padding:10px 14px;margin-top:12px;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.06)}
-.reserve-box-left{display:flex;align-items:center;gap:8px}
+
+.reserve-box{background:linear-gradient(135deg,var(--acl),#fff);border:1px solid var(--acm);border-radius:var(--rs);padding:12px 14px;margin-top:12px;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.reserve-top{display:flex;align-items:center;gap:8px;margin-bottom:10px}
 .reserve-box-icon{font-size:20px;flex-shrink:0}
 .reserve-box-text p{font-size:10px;color:var(--ac);letter-spacing:.1em;font-weight:500}
-.reserve-box-text h3{font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:500;color:var(--text);letter-spacing:.02em}
-.reserve-btn{flex-shrink:0;padding:8px 16px;background:linear-gradient(135deg,var(--acd),var(--ac));color:#fff;border:none;border-radius:20px;font-size:11px;cursor:pointer;letter-spacing:.04em;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,.12);font-family:'Noto Sans JP',sans-serif}
+.reserve-box-text h3{font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:500;color:var(--acd);letter-spacing:.02em}
+.reserve-btns{display:flex;gap:8px}
+.reserve-btn{flex:1;padding:9px 6px;background:var(--ac);color:#fff;border:none;border-radius:20px;font-size:11px;cursor:pointer;letter-spacing:.02em;text-align:center;font-family:'Noto Sans JP',sans-serif;text-decoration:none;display:block;font-weight:500;box-shadow:0 2px 6px rgba(0,0,0,.1)}
+
 </style>
 </head>
 <body>
@@ -70,15 +72,19 @@ body{font-family:'Noto Sans JP',sans-serif;background:var(--cream);color:var(--t
   <div class="col-section" id="col-5">
     <div class="img-wrap"><img src="https://raw.githubusercontent.com/YUKA-Tks/Andme-column-uv/main/%EF%BC%86me%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84_%E3%82%B3%E3%83%A9%E3%83%A0%E7%94%BB%E5%83%8Fuv%E2%91%A5.png" alt="コラム6"></div>
   </div>
-  <div class="reserve-box" onclick="alert('予約URLをここに設定してください')">
-    <div class="reserve-box-left">
+  <div class="reserve-box">
+    <div class="reserve-top">
       <span class="reserve-box-icon">🌸</span>
       <div class="reserve-box-text">
         <p>SALON RESERVATION</p>
         <h3>ご予約はこちらから</h3>
       </div>
     </div>
-    <button class="reserve-btn">予約する →</button>
+    <div class="reserve-btns">
+      <a class="reserve-btn" href="https://beauty.hotpepper.jp/kr/slnH000809696/" target="_blank">吉祥寺店</a>
+      <a class="reserve-btn" href="https://beauty.hotpepper.jp/kr/slnH000797106/" target="_blank">高崎店</a>
+      <a class="reserve-btn" href="https://beauty.hotpepper.jp/kr/slnH000797108/" target="_blank">神戸元町店</a>
+    </div>
   </div>
 </div>
 <script>
